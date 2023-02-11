@@ -6,15 +6,15 @@ public class Application {
      *
      * The Lab.login method should return true if a login should be permitted given two values.
      */
-    public static void main(String[] args) {
-        Lab loginLab = new Lab();
-        System.out.println("Should 'admin' be allowed to login with 'qwerty'? (should be true):");
-        System.out.println(loginLab.login("admin", "qwerty"));
-        System.out.println("Should 'admin' be allowed to login with 'pass123'? (should be false):");
-        System.out.println(loginLab.login("admin", "pass123"));
-        System.out.println("Should 'user' be allowed to login with 'password'? (should be true):");
-        System.out.println(loginLab.login("user", "password"));
-        System.out.println("Should 'user' be allowed to login with 'mypass'? (should be false):");
-        System.out.println(loginLab.login("admin", "mypass"));
+    public class Lab {
+        public boolean login(String username, String password){
+            if (username.equals("admin") && password.equals("qwerty")) {
+                return true;
+            } else if (username.equals("user") && password.equals("password")) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
-}
+}    
